@@ -16,7 +16,8 @@ namespace LogicalProblems
                 Console.WriteLine("Select the option");
                 Console.WriteLine("1.GameStart" + "\n" +
                                   "2.RollDice" + "\n" +
-                                  "3.Exit" + "\n");
+                                  "3.CheckPosition" + "\n" +
+                                  "4.Exit" + "\n");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -29,6 +30,11 @@ namespace LogicalProblems
                         die.Dices();
                         break;
                     case 3:
+                        Snakes snakes = new Snakes();
+                        snakes.Check();
+                        break;
+
+                    case 4:
                         flag = false;
                         break;
                 }
