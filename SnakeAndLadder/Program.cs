@@ -15,7 +15,8 @@ namespace LogicalProblems
                 Console.WriteLine("-------SnakeAndLadder Game ------");
                 Console.WriteLine("Select the option");
                 Console.WriteLine("1.GameStart" + "\n" +
-                                  "2.Exit" + "\n");
+                                  "2.RollDice" + "\n" +
+                                  "3.Exit" + "\n");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -23,7 +24,11 @@ namespace LogicalProblems
                         Starts starts = new Starts();
                         starts.GameStart();
                         break;
-                    case 12:
+                    case 2:
+                            Die die = new Die();
+                        die.Dices();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
